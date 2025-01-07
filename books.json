@@ -68,45 +68,6 @@
       "stars": "5",
       "id": 5,
       "img": "https://www.davidjpphillips.com/wp-content/uploads/2023/08/highonlife_copy-195x300.jpg"
-    },
-    {
-      "author": "Hi",
-      "name": "Hello World",
-      "genres": [
-        "Mystery"
-      ],
-      "completed": true,
-      "start": "02/03/3",
-      "end": "03/03/4",
-      "stars": 4,
-      "img": "https://t4.ftcdn.net/jpg/09/60/92/23/360_F_960922353_WQWHinGFOg3MRZ69ahdabkb6qWr6Nk9c.jpg",
-      "id": 6
-    },
-    {
-      "author": "Hi",
-      "name": "Hello World",
-      "genres": [
-        "Mystery"
-      ],
-      "completed": true,
-      "start": "02/23/3",
-      "end": "03/23/4",
-      "stars": 3,
-      "img": "https://t4.ftcdn.net/jpg/09/60/92/23/360_F_960922353_WQWHinGFOg3MRZ69ahdabkb6qWr6Nk9c.jpg",
-      "id": 7
-    },
-    {
-      "author": "Hi",
-      "name": "Hello World",
-      "genres": [
-        "Mystery"
-      ],
-      "completed": false,
-      "start": "02/02/3",
-      "end": null,
-      "stars": 3,
-      "img": "https://via.placeholder.com/150",
-      "id": 8
     }
   ]
 }
