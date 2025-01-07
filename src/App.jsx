@@ -27,7 +27,7 @@ function App() {
       element: <Root />, // Root layout component.
       children: [
         { path: '/', element: <Books /> }, // Route for displaying the books list.
-        { path: '/book', element: <Book /> }, // Route for displaying a single book's details.
+        { path: '/book/:id', element: <Book /> }, // Dynamic route for displaying a single book's details.
         { path: '/addnew', element: <AddBook /> }, // Route for adding a new book.
       ],
     },
