@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { useState } from 'react';
 import TextField from '@mui/material/TextField';
 import FormControlLabel from '@mui/material/FormControlLabel';
@@ -25,6 +26,7 @@ function AddBook() {
     start: null,
     end: null,
     stars: null,
+    img: '',
   });
 
   const genreChangeHandler = (event) => {
@@ -54,7 +56,8 @@ function AddBook() {
 
   function postHandler(e) {
     e.preventDefault();
-    post('books', { ...book, stars: rateValue });
+    const defaultImage = 'https://via.placeholder.com/150';
+    post('books', { ...book, stars: rateValue, img: book.img || defaultImage });
   }
 
   return (

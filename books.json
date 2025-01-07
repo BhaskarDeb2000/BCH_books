@@ -94,6 +94,19 @@
       "stars": 3,
       "img": "https://t4.ftcdn.net/jpg/09/60/92/23/360_F_960922353_WQWHinGFOg3MRZ69ahdabkb6qWr6Nk9c.jpg",
       "id": 7
+    },
+    {
+      "author": "Hi",
+      "name": "Hello World",
+      "genres": [
+        "Mystery"
+      ],
+      "completed": false,
+      "start": "02/02/3",
+      "end": null,
+      "stars": 3,
+      "img": "https://via.placeholder.com/150",
+      "id": 8
     }
   ]
 }
