@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import { useState } from 'react';
 import TextField from '@mui/material/TextField';
 import FormControlLabel from '@mui/material/FormControlLabel';
@@ -16,8 +15,8 @@ import { Stack, Typography } from '@mui/material';
 
 function AddBook() {
   const { alert, post } = useAxios('http://localhost:3000');
-  const [rateValue, setRateValue] = useState(3); 
-  const [hoverValue, setHoverValue] = useState(-1); 
+  const [rateValue, setRateValue] = useState(3);
+  const [hoverValue, setHoverValue] = useState(-1);
   const [book, setBook] = useState({
     author: '',
     name: '',
@@ -65,7 +64,11 @@ function AddBook() {
         alignItems="stretch"
         sx={{ my: 2, mx: 'auto', width: '25%' }}
       >
-        {alert.show && <Alert severity={alert.type}>{alert.message}</Alert>}
+        {alert.show && (
+          <Alert severity={alert.type} sx={{ animation: 'fadeIn 0.5s' }}>
+            {alert.message}
+          </Alert>
+        )}
 
         <Typography variant="h4" component="h2" sx={{ my: 10 }}>
           Add a book
