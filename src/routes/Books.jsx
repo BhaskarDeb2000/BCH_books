@@ -80,7 +80,7 @@ function Books() {
                 {/* Display the book's image at the top of the card. */}
                 <CardMedia
                   sx={{ height: 250 }}
-                  image={book.img}
+                  image={book.img }
                   title={book.name}
                 />
 
