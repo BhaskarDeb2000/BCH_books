@@ -26,24 +26,27 @@ function Book() {
   return (
     <Box sx={{ mx: 'auto', p: 2 }}>
       {alert.show && <Alert severity={alert.type}>{alert.message}</Alert>}
-      {loading && <CircularProgress sx={{ margin: '50vh' }} />}
-      {!loading && book && (
-        <Box>
-          <CardMedia
-            sx={{ height: 400, width: 'auto', margin: 'auto' }}
-            image={book.img}
-            title={book.name}
-          />
-          <Typography variant="h3" sx={{ mt: 2 }}>
-            {book.name}
-          </Typography>
-          <Typography variant="h5" sx={{ mt: 1 }}>
-            {book.author}
-          </Typography>
-          <Typography variant="body1" sx={{ mt: 2 }}>
-            {book.description}
-          </Typography>
-        </Box>
+      {loading ? (
+        <CircularProgress sx={{ margin: '50vh' }} />
+      ) : (
+        book && (
+          <Box>
+            <CardMedia
+              sx={{ height: 400, width: 'auto', margin: 'auto' }}
+              image={book.img}
+              title={book.name}
+            />
+            <Typography variant="h3" sx={{ mt: 2 }}>
+              {book.name}
+            </Typography>
+            <Typography variant="h5" sx={{ mt: 1 }}>
+              {book.author}
+            </Typography>
+            <Typography variant="body1" sx={{ mt: 2 }}>
+              {book.description}
+            </Typography>
+          </Box>
+        )
       )}
     </Box>
   );
