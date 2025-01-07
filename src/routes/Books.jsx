@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Box, Card, CardActions, CardMedia, Button, CircularProgress, Stack, Rating, Chip, Typography, Alert } from '@mui/material';
+import { Box, Card, CardActions, CardMedia, Button, CircularProgress, Stack, Rating, Chip, Typography, Alert, TextField } from '@mui/material';
 import useAxios from '../services/useAxios';
 
 function Books() {
@@ -8,7 +8,7 @@ function Books() {
 
   // State to store the list of books fetched from the API.
   const [books, setBooks] = useState([]);
-
+  const [searchTerm, setSearchTerm] = useState('');
 
   // useEffect to trigger data fetching when the component is mounted.
   useEffect(() => {
@@ -32,6 +32,12 @@ function Books() {
     }
   }, [data]);
 
+  // Filter books based on search term.
+  const filteredBooks = books.filter((book) =>
+    book.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    book.author.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
   return (
     <Box sx={{ mx: 'auto', p: 2 }}>
       {/* Show alert messages if present. */}
@@ -43,6 +49,16 @@ function Books() {
       {/* Render the books list once data has been loaded. */}
       {!loading && (
         <div>
+          {/* Search input for filtering books */}
+          <TextField
+            label="Search Books"
+            variant="outlined"
+            fullWidth
+            sx={{ mb: 2 }}
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+          />
+
           {/* Stack to organize book cards in a responsive layout. */}
           <Stack
             sx={{ justifyContent: 'space-around' }}
@@ -51,7 +67,7 @@ function Books() {
             useFlexGap
             flexWrap="wrap"
           >
-            {books.map((book) => (
+            {filteredBooks.map((book) => (
               <Card
                 sx={{
                   display: 'flex',
