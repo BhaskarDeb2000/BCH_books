@@ -30,9 +30,9 @@ function Book() {
         <CircularProgress sx={{ margin: '50vh' }} />
       ) : (
         book && (
-          <Box>
+          <Box >
             <CardMedia
-              sx={{ height: 400, width: 'auto', margin: 'auto' }}
+              sx={{ height: 700, width:"25%", margin: 'auto'}}
               image={book.img}
               title={book.name}
             />
